@@ -18,24 +18,23 @@ app.get('/', (req, res) => {
   res.render('game/index');
 });
 
-app.get('/play', (req, res) => {
-  res.render('game/play');
+app.get('/play', async (req, res) => {
+  const round = await Round.findOne({});
+  res.render('game/play', { round });
 });
 
-app.post('/round', (req, res) => {
+app.post('/round', async (req, res) => {
   const newRound = new Round({
     question: req.body.question,
     answer: req.body.answer,
     timer: req.body.timer,
   });
-  newRound.save((err, savedRound) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(savedRound);
-      res.send('Round saved');
-    }
-  });
+  try {
+    await newRound.save();
+    res.json({ message: 'Round saved successfully' });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 module.exports = app;
