@@ -11,4 +11,8 @@ app.get('/', (req, res) => {
   res.render('game/index');
 });
 
+app.get('/play', (req, res) => {
+  res.render('game/play');
+});
+
 module.exports = app;
