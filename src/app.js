@@ -1,13 +1,14 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
+app.use(express.static('public'));
 
-app.get('/game', (req, res) => {
-  res.send('This is the game path');
+app.get('/', (req, res) => {
+  res.render('game/index');
 });
 
 module.exports = app;

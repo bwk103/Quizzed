@@ -2,7 +2,7 @@
   "name": "quizapp",
   "version": "1.0.0",
   "description": "A fast-paced online quiz game!",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "lint": "eslint ./src --fix",
     "test": "jest"
@@ -10,6 +10,7 @@
   "author": "Ben Kielty",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.8",
     "express": "^4.16.3"
   },
   "devDependencies": {
