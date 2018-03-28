@@ -2,6 +2,12 @@ const app = require('../src/app');
 
 const request = require('supertest');
 
+const mongoose = require('mongoose');
+
+afterAll(() => {
+  mongoose.disconnect();
+});
+
 describe('root path', () => {
   describe('GET request', () => {
     test('returns 200 status code', async () => {
