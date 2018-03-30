@@ -41,7 +41,7 @@ describe('/play path', () => {
     });
     test('renders game/play', async () => {
       const response = await request(app).get('/play');
-      expect(response.text).toContain('This is the play route');
+      expect(response.text).toContain('Is this a test?');
     });
   });
 });

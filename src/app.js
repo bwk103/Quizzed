@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 app.get('/play', async (req, res) => {
   const round = await Round.findOne({});
-  res.render('game/play', { round });
+  res.json(round);
 });
 
 app.post('/round', async (req, res) => {
