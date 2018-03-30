@@ -1,12 +1,11 @@
 const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const Round = require('./models/Round');
+const db = require('./db/config');
 
 const app = express();
-
-mongoose.connect('mongodb://localhost:27017/quizApp');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));

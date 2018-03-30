@@ -4,6 +4,17 @@ const request = require('supertest');
 
 const mongoose = require('mongoose');
 
+const Round = require('../src/models/Round');
+
+
+beforeAll(() => {
+  Round.create({
+    question: 'Is this a test?',
+    answer: 'Yes, it is.',
+    timer: 30,
+  });
+});
+
 afterAll(() => {
   mongoose.disconnect();
 });
