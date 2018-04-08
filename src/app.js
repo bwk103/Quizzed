@@ -13,12 +13,15 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
 app.get('/', (req, res) => {
   res.render('game/index');
 });
 
 app.get('/play', async (req, res) => {
-  const round = await Round.findOne({});
+  const numberOfQuestions = await Round.count({});
+  const roundSelector = Math.floor(Math.random() * Math.floor(numberOfQuestions));
+  const round = await Round.findOne({}).skip(roundSelector);
   res.json(round);
 });
 

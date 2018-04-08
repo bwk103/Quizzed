@@ -19,6 +19,11 @@ const RoundSchema = new mongoose.Schema({
   },
 });
 
+RoundSchema.methods.checkAnswer = function (submittedAnswer) {
+  return submittedAnswer.toLowerCase().trim() === this.answer.toLowerCase().trim();
+};
+
+
 const Round = mongoose.model('Round', RoundSchema);
 
 module.exports = Round;
