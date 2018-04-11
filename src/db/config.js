@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const config = require('../config');
 
-const { db: { host, port, name } } = config;
+const { db: { host, port, name } } = config || null;
 
-const connectionString = `mongodb://${host}:${port}/${name}`;
+const connectionString = process.env.MONGODB_URI || `mongodb://${host}:${port}/${name}`;
 
 const db = mongoose.connect(connectionString, {}).then(
   () => {

@@ -21,6 +21,11 @@ const config = {
       name: 'quizAppTest',
     },
   },
+  production: {
+    app: {
+      port: process.env.PORT,
+    },
+  },
 };
 
 module.exports = config[env];
