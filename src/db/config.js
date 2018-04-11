@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const config = require('../config');
 
-const { db: { host, port, name } } = config || null;
+// const { db: { host, port, name } } = config || null;
 
 const connectionString = process.env.MONGODB_URI || `mongodb://${host}:${port}/${name}`;
 
