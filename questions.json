@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the capital city of England?",
+    "answer": "London",
+    "timer": 15
+  },
+  {
+    "question": "What is the name of the palace in which the British Royal Family reside?",
+    "answer": "Buckingham Palace",
+    "timer": 20
+  },
+  {
+    "question": "Where do the England football team play their home games?",
+    "answer": "Wembley",
+    "timer": 20
+  },
+  {
+    "question": "What is the name of the Big Wheel on the river Thames?",
+    "answer": "London Eye",
+    "timer": 20
+  },
+  {
+    "question": "What is the capital city of Wales?",
+    "answer": "Cardiff",
+    "timer": 15
+  },
+  {
+    "question": "What is the capital city of Northern Ireland",
+    "answer": "Belfast",
+    "timer": 15
+  },
+  {
+    "question": "What is the name of the clock bell in the Palace of Westminster?",
+    "answer": "Big Ben",
+    "timer": 20
+  },
+  {
+    "question": "What is the name of the river that flows through London?",
+    "answer": "Thames",
+    "timer": 15
+  },
+  {
+    "question": "Where do British politicians sit?",
+    "answer": "Westminster",
+    "timer": 15
+  },
+  {
+    "question": "Where are most of the dinosaurs in London found?",
+    "answer": "Natural History Museum",
+    "timer": 15
+  }
+]
