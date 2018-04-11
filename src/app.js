@@ -1,10 +1,10 @@
 const express = require('express');
 const path = require('path');
-// const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const Round = require('./models/Round');
 const db = require('./db/config');
 const cors = require('cors');
+const serveStatic = require('serve-static');
 
 const app = express();
 
@@ -14,11 +14,12 @@ app.use(cors());
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/', serveStatic(path.join(__dirname, '/../dist')));
 
 
-app.get('/', (req, res) => {
-  res.render('game/index');
-});
+// app.get('/', (req, res) => {
+//   res.render('game/index');
+// });
 
 app.get('/play', async (req, res) => {
   const numberOfQuestions = await Round.count({});
