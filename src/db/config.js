@@ -7,10 +7,10 @@ const config = require('../config');
 
 const db = mongoose.connect(process.env.MONGODB_URI || connectionString, {}).then(
   () => {
-    console.log(`Connected to ${name} on port ${port}`);
+    // console.log(`Connected to ${name} on port ${port}`);
   },
   (error) => {
-    console.log(error);
+    // console.log(error);
   },
 );
 
